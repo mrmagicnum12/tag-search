@@ -83,7 +83,7 @@ const createAnswerToDisplay = ()=>{
 //start program
 const start = ()=>{
   cache.checkForCacheUpdate('data','cache/cache.json',(err, update)=>{
-     if(err){return console.log(err.message);}
+     if(err){console.log(err.message);}
      if(!update){
        cache.putTagsInCache('cache/cache.json',(err)=>{
          if(err){log(`error loading cache ${err.message}`);}
