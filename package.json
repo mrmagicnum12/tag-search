@@ -1,0 +1,22 @@
+{
+  "name": "node-exam",
+  "version": "1.0.0",
+  "description": "Node.js Exam",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "mocha test dolor,ipsum",
+    "coverage": "istanbul cover _mocha; cp coverage/lcov-report/index.html test/coverage.html",
+    "showcoverage": "open coverage/lcov-report/index.html",
+    "jshint": "jshint index.js"
+  },
+  "keywords": [],
+  "author": "Anthony Buchanan",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0"
+  }
+}

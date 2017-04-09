@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for modules/tag.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">modules/</a> tag.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.53% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>79/81</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>22/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>73/73</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+const fs = require('fs');
+const log = console.log;
+&nbsp;
+const orderTagsInDescend =(tags)=&gt;{
+  let ordered = [];
+  let descending = (a,b)=&gt;{return b.value - a.value;};
+  Object.keys(tags).forEach((key)=&gt;{
+     ordered.push({key: key, value: tags[key]});
+  });
+  return ordered.sort(descending);
+};
+&nbsp;
+const orderTagsInAscend =(tags)=&gt;{
+  let ordered = [];
+  let ascending = (a,b)=&gt;{return  a.value - b.value;};
+  Object.keys(tags).forEach((key)=&gt;{
+     ordered.push({key: key, value: tags[key]});
+  });
+  return ordered.sort(ascending);
+};
+&nbsp;
+&nbsp;
+const findTagOccurences = (dataObj)=&gt;{
+  const getAllTagValues = (obj)=&gt;{
+     let allTagsValues = [];
+     const getEachTagArray = (tags)=&gt;{
+       Object.keys(tags).forEach((key)=&gt;{
+         if(key === 'tags'){return allTagsValues = allTagsValues.concat(tags[key]);}
+         if(typeof tags[key] === 'object'){return getEachTagArray(tags[key]);}
+         <span class="missing-if-branch" title="if path not taken" >I</span>if(Array.isArray(tags[key])){<span class="cstat-no" title="statement not covered" >return tags[key].forEach(getEachTagArray(t));}</span>
+       });
+       return allTagsValues;
+     };
+     return getEachTagArray(obj);
+  };
+  const createTagList = (tags)=&gt;{
+    const tagList = {};
+    tags.forEach((tag)=&gt;{
+       if(tagList[tag]){
+         tagList[tag] += 1;
+       }else{
+         tagList[tag]=1;
+       }
+    });
+    return tagList;
+  };
+&nbsp;
+  if(typeof dataObj === 'object'){
+    return createTagList(getAllTagValues(dataObj));
+  }else{
+    return {};
+  }
+};
+&nbsp;
+const getTagsFromFile = (location, cb)=&gt;{
+    fs.readFile(location,'utf8',(err, data)=&gt;{
+      if(err){
+        return cb(err);
+      }else{
+        return cb(null,data.toString().replace(/\n/g, ","));
+      }
+    });
+};
+&nbsp;
+const createTagMap = (masterList, newList)=&gt;{
+    for(let t in newList){
+      if(masterList[t]){
+         masterList[t] = newList[t] + masterList[t];
+      }else{
+         masterList[t] = newList[t];
+      }
+    }
+    return masterList;
+};
+&nbsp;
+const getDataFromFiles = (dataDirectory, files, index, cb)=&gt;{
+   if(index &lt; 0){return cb(null);}
+   fs.readFile(`${dataDirectory}/${files[index]}`,'utf8', cb);
+};
+&nbsp;
+const isJSON = (value)=&gt;{
+  try{
+    JSON.parse(value);
+    return true;
+  }catch(e){
+    return false;
+  }
+};
+&nbsp;
+const getAllTagsFromJSON = (dataDirectory, cb)=&gt;{
+  let files = [];
+  let filesToRead = 0;
+  let dataObj = [];
+&nbsp;
+  const check = (err, fileBody)=&gt;{
+     <span class="missing-if-branch" title="if path not taken" >I</span>if(err){<span class="cstat-no" title="statement not covered" >log(err);}</span>
+     if(filesToRead &gt; -1){
+       filesToRead = filesToRead - 1;
+       if(isJSON(fileBody)){
+         dataObj.push(JSON.parse(fileBody));
+         return getDataFromFiles(dataDirectory, files, filesToRead, check);
+       }else{
+         log(`******* Error ******* File contains invalid json`);
+         return getDataFromFiles(dataDirectory, files,  filesToRead, check);
+       }
+     }else{
+       return cb(null, dataObj);
+     }
+  };
+&nbsp;
+  fs.readdir(dataDirectory,(err, f)=&gt;{
+      if(err){return cb(err);}
+      filesToRead = f.length - 1;
+      files = f;
+      getDataFromFiles(dataDirectory, f, filesToRead, check);
+  });
+};
+&nbsp;
+module.exports = {getTagsFromFile, findTagOccurences, getAllTagsFromJSON, createTagMap, orderTagsInDescend, orderTagsInAscend}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 08 2017 22:11:37 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
