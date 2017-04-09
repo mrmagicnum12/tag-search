@@ -23,3 +23,9 @@ cats      0
 - use the asynchronous variants of the file IO functions (eg. use `fs.readFile` not `fs.readFileSync`).
 - if any of the data files contain invalid JSON, log the error with `console.error` and continue, ignoring that file.
 - you can use any version of node, however your solution must use plain callbacks rather than promises.
+
+Solution
+----
+This program allows for user cli arguments or reads a tags text file to obtain tags to search the number of occurrences in the json files in the data directory and prints the search results to the console sorted most popular to least popular. 
+
+In addition the program will cache the initial search and reference the cache file as long as the data directory is not updated. If data directory is updated, the program will read the data directory again and automatically update the cache file.
