@@ -33,6 +33,7 @@ const hasFilesUpdated = (dataDirectory, files, index, cacheFileLocation, cb)=>{
 };
 
 const checkForCacheUpdate = (dataDirectory, cacheFileLocation, cb)=>{
+
   let files = [];
   let filesToRead = 0;
 
@@ -49,11 +50,14 @@ const checkForCacheUpdate = (dataDirectory, cacheFileLocation, cb)=>{
        return cb(null, false);
      }
   };
-  fs.readdir(dataDirectory,(err, f)=>{
-      if(err){return cb(err);}
-      filesToRead = f.length-1;
-      files = f;
-      hasFilesUpdated(dataDirectory, f, filesToRead, cacheFileLocation, check);
+  fs.stat(cacheFileLocation,(err)=>{
+    if(err){return cb(err, true);}
+    fs.readdir(dataDirectory,(err, f)=>{
+        if(err){return cb(err);}
+        filesToRead = f.length-1;
+        files = f;
+        hasFilesUpdated(dataDirectory, f, filesToRead, cacheFileLocation, check);
+    });
   });
 };
 module.exports = {putTagsInCache, getTagsInCache, writeCacheFile, checkForCacheUpdate};

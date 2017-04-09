@@ -73,7 +73,18 @@ describe('Node Exam - Cache',()=>{
               done();
             });
           });
-        },600);
+        },800);
     });
   });
-})
+
+  it('should return true if no cache file exist in the cache directory',(done)=>{
+    fs.unlink('test/cache/cache.json',()=>{
+      cache.checkForCacheUpdate('data','test/cache/cache.json', (err, update)=>{
+          expect(update).to.equal(true);
+          cache.writeCacheFile('test/cache/cache.json', JSON.stringify(list), (err)=>{
+              done();
+          })
+      });
+    });
+  });
+});

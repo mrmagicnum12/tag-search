@@ -3,5 +3,3 @@ ipsum
 dolor
 sit
 amet
-ant
-ava
